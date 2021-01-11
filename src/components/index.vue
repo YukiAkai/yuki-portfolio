@@ -63,7 +63,7 @@ export default {
       position: relative;
       width: 220px;
       display: block;
-      margin: 0 0 20px 22px;
+      margin: 0 17px 20px 0;
       &__text {
         font-family: "Comic Sans MS";
         font-weight: bold;
