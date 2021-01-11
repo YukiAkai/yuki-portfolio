@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-processing">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'Processing'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-processing {
   padding: 20px;
   margin: 0 auto;
   width: 990px;

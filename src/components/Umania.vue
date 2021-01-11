@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-umania">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'Umania'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-umania {
   padding: 20px;
   margin: 0 auto;
   width: 990px;

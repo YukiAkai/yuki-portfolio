@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-pro-map">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'CatooonHouse'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-pro-map {
   padding: 20px;
   margin: 0 auto;
   width: 990px;

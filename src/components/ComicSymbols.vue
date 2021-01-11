@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-comic">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'ComicSymbols'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-comic {
   padding: 20px;
   margin: 0 auto;
   width: 990px;

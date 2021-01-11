@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-new-year">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'NewYearCard'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-new-year {
   padding: 20px;
   margin: 0 auto;
   width: 990px;

@@ -17,7 +17,7 @@ export default {
       items: [
         {
           title: 'Comic Symbols',
-          path: '/commic-symbols',
+          path: '/comic-symbols',
           img: require('../assets/img/top_manpu.png')
         },
         {
@@ -54,11 +54,11 @@ export default {
 <style lang="scss" scoped>
 .page-top {
   padding: 20px 20px 0;
+  margin: 0 auto;
+  width: 990px;
   &__contents {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    width: 990px;
     .top-content {
       position: relative;
       width: 220px;

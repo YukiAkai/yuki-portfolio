@@ -1,17 +1,17 @@
 <template>
-  <div class="page-profile">
+  <div class="page-link">
     Comming Soon...
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'Link'
 }
 </script>
 
 <style lang="scss" scoped>
-.page-profile {
+.page-link {
   padding: 20px;
   margin: 0 auto;
   width: 990px;
