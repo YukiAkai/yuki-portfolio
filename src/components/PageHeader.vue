@@ -42,8 +42,8 @@ export default {
         transition: opacity 0.15s;
       }
       &__link {
-        font-family: "Comic Sans MS";
         font-size: 18px;
+        font-weight: bold;
         color: #fff;
         padding: 10px 0;
         display: block;

@@ -66,7 +66,6 @@ export default {
       display: block;
       margin: 0 17px 20px 0;
       &__text {
-        font-family: "Comic Sans MS";
         font-weight: bold;
         text-align: center;
         z-index: 2;
