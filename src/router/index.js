@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueHead from 'vue-head'
 import Top from '../components/index'
 import Profile from '../components/Profile'
 import Activity from '../components/Activity'
@@ -12,6 +13,7 @@ import Processing from '../components/Processing'
 import NewYearCard from '../components/NewYearCard'
 
 Vue.use(Router)
+Vue.use(VueHead)
 
 export default new Router({
   routes: [
