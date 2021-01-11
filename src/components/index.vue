@@ -56,6 +56,7 @@ export default {
   padding: 20px 20px 0;
   margin: 0 auto;
   width: 990px;
+  min-height: 350px;
   &__contents {
     display: flex;
     flex-wrap: wrap;
