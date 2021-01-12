@@ -15,7 +15,7 @@ export default {
   text-align: center;
   padding: 20px 0;
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
   width: 990px;
   &__text {
     font-size: 12px;
