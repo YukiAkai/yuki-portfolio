@@ -14,6 +14,9 @@ export default {
   background: #eee;
   text-align: center;
   padding: 20px 0;
+  position: absolute;
+  bottom: 30px;
+  width: 990px;
   &__text {
     font-size: 12px;
     color: #999;
