@@ -16,6 +16,16 @@ export default {
     return {
       items: [
         {
+          title: 'DOYAGAERU',
+          path: '/doyagaeru',
+          img: require('../assets/img/top_doya.png')
+        },
+        {
+          title: 'New Year’s Card',
+          path: '/new-year-card',
+          img: require('../assets/img/top_new-year.png')
+        },
+        {
           title: 'Comic Symbols',
           path: '/comic-symbols',
           img: require('../assets/img/top_manpu.png')
@@ -33,17 +43,12 @@ export default {
         {
           title: 'Catooon House',
           path: '/catooon-house',
-          img: require('../assets/img/top_pro-map.png')
+          img: require('../assets/img/top_catooon.png')
         },
         {
           title: 'Processing',
           path: '/processing',
           img: require('../assets/img/top_processing.png')
-        },
-        {
-          title: 'New Year’s Card',
-          path: '/new-year-card',
-          img: require('../assets/img/top_new-year.png')
         }
       ]
     }
@@ -53,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-top {
-  padding: 20px 20px 0;
+  padding: 30px 20px 10px;
   margin: 0 auto;
   width: 990px;
   min-height: 350px;
@@ -61,22 +66,24 @@ export default {
     display: flex;
     flex-wrap: wrap;
     .top-content {
+      background: #eee;
+      box-shadow: 0 3px 3px rgba(0,0,0,0.2);
       position: relative;
       width: 220px;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 0 17px 20px 0;
+      padding: 20px 10px 10px;
       &__text {
         font-weight: bold;
         text-align: center;
-        z-index: 2;
-        width: 100%;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        line-height: 1.2;
+        height: 40px;
       }
       &__img {
-        box-shadow: 0 0 3px rgba(0,0,0,0.5);
+        max-width: 100%;
+        margin-top: auto;
       }
     }
   }

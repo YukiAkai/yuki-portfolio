@@ -1,6 +1,9 @@
 <template>
   <div class="header">
-    <img class="header__logo" src="../assets/img/top.png" alt="Yuki's Portfolio">
+    <div class="header__item header-item">
+      <img class="header-item__img" src="../assets/img/header.png">
+      <p class="header-item__text">Yuki's Portfolio</p>
+    </div>
     <ul class="header__menu header-menu">
       <li v-for="(item, index) in items" :key=index class="header-menu__item header-menu-item">
         <router-link class="header-menu-item__link" :to=item.path>{{ item.title }}</router-link>
@@ -26,9 +29,20 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header {
-  &__logo {
-    width: 100%;
-    vertical-align: top;
+  .header-item {
+    position: relative;
+    &__img {
+      width: 100%;
+      vertical-align: top;
+    }
+    &__text {
+      font-family: "Chalkboard SE", "Comic Sans MS", Meiryo;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+    }
   }
   &__menu {
     display: flex;

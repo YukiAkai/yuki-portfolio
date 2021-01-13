@@ -5,6 +5,7 @@ import Top from '../components/index'
 import Profile from '../components/Profile'
 import Activity from '../components/Activity'
 import Link from '../components/Link'
+import Doyagaeru from '../components/Doyagaeru'
 import ComicSymbols from '../components/ComicSymbols'
 import KyotoShrineBattle from '../components/KyotoShrineBattle'
 import Umania from '../components/Umania'
@@ -38,6 +39,16 @@ export default new Router({
       component: Link
     },
     {
+      path: '/doyagaeru',
+      name: 'Doyagaeru',
+      component: Doyagaeru
+    },
+    {
+      path: '/new-year-card',
+      name: 'NewYearCard',
+      component: NewYearCard
+    },
+    {
       path: '/comic-symbols',
       name: 'ComicSymbols',
       component: ComicSymbols
@@ -61,11 +72,6 @@ export default new Router({
       path: '/processing',
       name: 'Processing',
       component: Processing
-    },
-    {
-      path: '/new-year-card',
-      name: 'NewYearCard',
-      component: NewYearCard
     }
   ]
 })
