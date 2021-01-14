@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-activity {
+.page-doyagaeru {
   padding: 20px;
   margin: 0 auto;
   width: 990px;
