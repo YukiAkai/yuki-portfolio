@@ -72,6 +72,7 @@ export default {
       width: 220px;
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
       margin: 0 17px 20px 0;
       padding: 20px 10px 10px;
@@ -83,7 +84,6 @@ export default {
       }
       &__img {
         max-width: 100%;
-        margin-top: auto;
       }
     }
   }
