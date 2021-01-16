@@ -60,13 +60,25 @@ export default {
 
 <style lang="scss" scoped>
 .page-top {
+  $this: &;
   padding: 30px 20px 10px;
   margin: 0 auto;
-  width: 990px;
+  max-width: 990px;
   min-height: 350px;
   &__contents {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 220px;
+      height: 0;
+    }
+    &::before {
+      order: 1;
+    }
     .top-content {
       background: #eee;
       box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -76,7 +88,7 @@ export default {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      margin: 0 17px 20px 0;
+      margin-bottom: 25px;
       padding: 20px 10px 10px;
       &__text {
         font-weight: bold;
@@ -92,9 +104,16 @@ export default {
   &--sp {
     padding: 30px 4% 10px;
     width: auto;
+    #{$this}__contents {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
     .top-content {
       width: 47%;
       margin-right: 20px;
+      margin-bottom: 20px;
       justify-content: center;
       &:nth-child(even) {
         margin-right: 0;
