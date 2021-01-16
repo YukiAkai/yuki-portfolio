@@ -1,13 +1,11 @@
 <template>
   <div :class="{ 'header--sp': isSmartPhone }" class="header">
     <div class="header__item header-item">
-      <img
-        class="header-item__img"
-        src="../assets/img/header.png">
+      <img class="header-item__img" src="../assets/img/header.png">
       <p class="header-item__text">Yuki's Portfolio</p>
     </div>
     <ul class="header__menu header-menu">
-      <li v-for="(item, index) in items" :key="index" class="header-menu__item header-menu-item">
+      <li v-for="(item, index) in items" :class="{ 'header-menu-item--current': isCurrentPath(item.reg) }" :key="index" class="header-menu__item header-menu-item">
         <router-link :to="item.path" class="header-menu-item__link">{{ item.title }}</router-link>
       </li>
     </ul>
@@ -22,11 +20,17 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Top', path: '/' },
-        { title: 'Profile', path: '/profile' },
-        { title: 'Activity', path: '/activity' },
-        { title: 'Link', path: '/link' }
+        { title: 'Top', path: '/', reg: '^/$' },
+        { title: 'Profile', path: 'profile', reg: '^/profile/?$' },
+        { title: 'Activity', path: 'activity', reg: '^/activity/?$' },
+        { title: 'Link', path: 'link', reg: '^/link/?$' }
       ]
+    }
+  },
+  methods: {
+    isCurrentPath (reg) {
+      const re = new RegExp(reg)
+      return this.$route.path.match(re)
     }
   }
 }
@@ -67,6 +71,13 @@ export default {
         font-size: 18px;
         font-weight: bold;
         color: #fff;
+      }
+      &--current {
+        pointer-events: none;
+        background: #3571c4;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
