@@ -1,5 +1,7 @@
 <template>
-  <div class="footer" :class="{ 'footer--sp': isSmartPhone }">
+  <div
+    :class="{ 'footer--sp': isSmartPhone }"
+    class="footer">
     <small class="footer__text">© 2021 Yuki Akai</small>
   </div>
 </template>
@@ -13,12 +15,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-  background: #eee;
-  text-align: center;
-  padding: 20px 0;
   position: absolute;
   bottom: 0;
   width: 990px;
+  padding: 20px 0;
+  text-align: center;
+  background: #eee;
   &__text {
     font-size: 12px;
     color: #999;

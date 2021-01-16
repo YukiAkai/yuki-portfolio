@@ -12,9 +12,9 @@ export default {
 
 <style lang="scss" scoped>
 .page-comic {
-  padding: 20px;
-  margin: 0 auto;
   width: 990px;
   min-height: 350px;
+  padding: 20px;
+  margin: 0 auto;
 }
 </style>
