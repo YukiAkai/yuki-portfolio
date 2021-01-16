@@ -2,8 +2,8 @@
   <div :class="{ 'page-top--sp': isSmartPhone }" class="page-top">
     <div class="page-top__contents">
       <router-link v-for="(item, index) in items" :key="index" :to="item.path" class="top-content">
-        <p class="top-content__text">{{ item.title }}</p>
         <img :src="item.img" class="top-content__img">
+        <p class="top-content__text">{{ item.title }}</p>
       </router-link>
     </div>
   </div>
@@ -86,14 +86,13 @@ export default {
       align-items: center;
       justify-content: center;
       width: 220px;
-      padding: 20px 10px 10px;
+      padding: 10px;
       margin-bottom: 25px;
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       &__text {
-        height: 40px;
+        margin-top: 10px;
         font-weight: bold;
-        line-height: 1.2;
         text-align: center;
       }
       &__img {
@@ -117,6 +116,9 @@ export default {
       margin-bottom: 20px;
       &:nth-child(even) {
         margin-right: 0;
+      }
+      &__text {
+        font-size: 10px;
       }
     }
   }
