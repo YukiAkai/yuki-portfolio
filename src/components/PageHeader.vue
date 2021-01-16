@@ -89,7 +89,7 @@ export default {
     }
     .header-menu-item {
       &__link {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   }
