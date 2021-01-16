@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="{ 'header--sp': isSmartPhone }">
     <div class="header__item header-item">
       <img class="header-item__img" src="../assets/img/header.png">
       <p class="header-item__text">Yuki's Portfolio</p>
@@ -13,8 +13,10 @@
 </template>
 
 <script>
+import layoutMixin from '../mixins/layout'
 export default {
   name: 'PageHeader',
+  mixins: [layoutMixin],
   data () {
     return {
       items: [
@@ -51,9 +53,11 @@ export default {
       width: 25%;
       background: #5389d6;
       text-align: center;
-      &:hover {
-        opacity: 0.7;
-        transition: opacity 0.15s;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.7;
+          transition: opacity 0.15s;
+        }
       }
       &__link {
         font-size: 18px;
@@ -61,6 +65,18 @@ export default {
         color: #fff;
         padding: 10px 0;
         display: block;
+      }
+    }
+  }
+  &--sp {
+    .header-item {
+      &__text {
+        font-size: 22px;
+      }
+    }
+    .header-menu-item {
+      &__link {
+        font-size: 16px;
       }
     }
   }

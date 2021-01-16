@@ -1,5 +1,5 @@
 <template>
-  <div class="page-top">
+  <div class="page-top" :class="{ 'page-top--sp': isSmartPhone }">
     <div class="page-top__contents">
       <router-link v-for="(item, index) in items" :key=index :to=item.path class="top-content">
         <p class="top-content__text">{{ item.title }}</p>
@@ -10,8 +10,10 @@
 </template>
 
 <script>
+import layoutMixin from '../mixins/layout'
 export default {
   name: 'Top',
+  mixins: [layoutMixin],
   data () {
     return {
       items: [
@@ -84,6 +86,18 @@ export default {
       }
       &__img {
         max-width: 100%;
+      }
+    }
+  }
+  &--sp {
+    padding: 30px 4% 10px;
+    width: auto;
+    .top-content {
+      width: 47%;
+      margin-right: 20px;
+      justify-content: center;
+      &:nth-child(even) {
+        margin-right: 0;
       }
     }
   }
