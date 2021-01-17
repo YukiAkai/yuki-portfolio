@@ -6,7 +6,7 @@
       <div class="profile-block__text profile-block-text">
         <p class="profile-block-text__name">Yuki Akai</p>
         <p class="profile-block-text__detail">
-          マークアップエンジニアの端くれ
+          マークアップエンジニアの端くれ。
           <br>
           CSS書くのが好き。マイクロインタラクションに興味あり。
         </p>
@@ -46,6 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-profile {
+  $this: &;
   width: 990px;
   min-height: 350px;
   padding: 30px;
@@ -83,11 +84,11 @@ export default {
     .profile-block-text {
       margin-left: 20px;
       &__name {
+        margin-bottom: 20px;
         font-size: 30px;
         font-weight: bold;
       }
       &__detail {
-        margin-top: 20px;
         line-height: 1.5;
       }
     }
@@ -143,21 +144,43 @@ export default {
   &--sp {
     width: auto;
     padding: 20px;
+    #{$this}__heading {
+      font-size: 30px;
+      .icon-profile {
+        width: 30px;
+        height: 30px;
+      }
+    }
     .profile-block,
     .skill-block__inner {
       flex-direction: column;
     }
     .profile-block {
       .profile-block-text {
-        margin-top: 20px;
         margin-left: 0;
         &__name {
+          margin: 15px 0;
+          font-size: 25px;
           text-align: center;
         }
       }
     }
     .skill-block {
+      &__heading {
+        font-size: 25px;
+        .icon-pc {
+          width: 25px;
+          height: 25px;
+        }
+      }
       .contents-skill {
+        &__heading {
+          font-size: 20px;
+          .icon-code {
+            width: 20px;
+            height: 20px;
+          }
+        }
         & + .contents-skill {
           margin-top: 20px;
           margin-left: 0;
