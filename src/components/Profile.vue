@@ -9,6 +9,8 @@
           マークアップエンジニアの端くれ。
           <br>
           CSS書くのが好き。マイクロインタラクションに興味あり。
+          <br>
+          最近はAtomic Designについて勉強中。
         </p>
       </div>
     </div>
@@ -17,7 +19,7 @@
       <div class="skill-block__inner">
         <div class="contents-skill">
           <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Design / Cording</h3>
-          <p class="contents-skill__detail">仕事ではメインで使っています。</p>
+          <p class="contents-skill__detail">基本的なことは一通りできます。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">HTML5</li>
             <li class="contents-skill-list__item">CSS3</li>
@@ -26,7 +28,7 @@
         </div>
         <div class="contents-skill">
           <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Frontend</h3>
-          <p class="contents-skill__detail">最近触り始めた領域</p>
+          <p class="contents-skill__detail">最近はVue.jsを使用して開発することが多いです。このサイトもVue.jsで作っています。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">JavaScript</li>
             <li class="contents-skill-list__item">Vue.js</li>
