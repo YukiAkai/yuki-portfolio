@@ -17,6 +17,7 @@
       <div class="skill-block__inner">
         <div class="contents-skill">
           <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Design / Cording</h3>
+          <p class="contents-skill__detail">仕事ではメインで使っています。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">HTML5</li>
             <li class="contents-skill-list__item">CSS3</li>
@@ -25,6 +26,7 @@
         </div>
         <div class="contents-skill">
           <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Frontend</h3>
+          <p class="contents-skill__detail">最近触り始めた領域</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">JavaScript</li>
             <li class="contents-skill-list__item">Vue.js</li>
@@ -113,13 +115,16 @@ export default {
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       &__heading {
-        margin-bottom: 20px;
         font-size: 25px;
         .icon-code {
           width: 25px;
           height: 25px;
           background-image: url("../assets/svg/icon-code.svg");
         }
+      }
+      &__detail {
+        margin: 20px 0;
+        font-size: 16px;
       }
       .contents-skill-list {
         $skill: ".contents-skill-list";
