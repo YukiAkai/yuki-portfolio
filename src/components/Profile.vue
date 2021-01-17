@@ -18,7 +18,7 @@
       <h2 class="skill-block__heading"><i class="icon icon-pc"></i>Skill</h2>
       <div class="skill-block__inner">
         <div class="contents-skill">
-          <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Design / Cording</h3>
+          <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Design / Coding</h3>
           <p class="contents-skill__detail">基本的なことは一通りできます。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">HTML5</li>
@@ -27,7 +27,7 @@
           </ul>
         </div>
         <div class="contents-skill">
-          <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Frontend</h3>
+          <h3 class="contents-skill__heading"><i class="icon icon-js"></i>Frontend</h3>
           <p class="contents-skill__detail">最近はVue.jsを使用して開発することが多いです。このサイトもVue.jsで作っています。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">JavaScript</li>
@@ -66,7 +66,7 @@ export default {
     margin-bottom: 20px;
     font-size: 35px;
     font-weight: bold;
-    .icon-profile {
+    .icon {
       width: 35px;
       height: 35px;
       background-image: url("../assets/svg/icon-profile.svg");
@@ -102,7 +102,7 @@ export default {
     &__heading {
       margin-bottom: 20px;
       font-size: 30px;
-      .icon-pc {
+      .icon {
         width: 30px;
         height: 30px;
         background-image: url("../assets/svg/icon-pc.svg");
@@ -118,10 +118,16 @@ export default {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       &__heading {
         font-size: 25px;
-        .icon-code {
-          width: 25px;
+        .icon {
           height: 25px;
-          background-image: url("../assets/svg/icon-code.svg");
+          &.icon-code {
+            width: 25px;
+            background-image: url("../assets/svg/icon-code.svg");
+          }
+          &.icon-js {
+            width: 23px;
+            background-image: url("../assets/svg/icon-js.svg");
+          }
         }
       }
       &__detail {
@@ -153,7 +159,7 @@ export default {
     padding: 20px;
     #{$this}__heading {
       font-size: 30px;
-      .icon-profile {
+      .icon {
         width: 30px;
         height: 30px;
       }
@@ -175,7 +181,7 @@ export default {
     .skill-block {
       &__heading {
         font-size: 25px;
-        .icon-pc {
+        .icon {
           width: 25px;
           height: 25px;
         }
@@ -183,9 +189,14 @@ export default {
       .contents-skill {
         &__heading {
           font-size: 20px;
-          .icon-code {
-            width: 20px;
+          .icon {
             height: 20px;
+            &.icon-code {
+              width: 20px;
+            }
+            &.icon-js {
+              width: 18px;
+            }
           }
         }
         & + .contents-skill {
