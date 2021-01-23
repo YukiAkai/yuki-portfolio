@@ -47,7 +47,9 @@ export default {
     position: relative;
     z-index: 100;
     display: flex;
+    align-items: flex-start;
     width: 410px;
+    height: auto;
     padding: 10px;
     background: #fff;
     &__img {
