@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
     <div class="page-new-year__contents">
-      <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="clickShowModal(item)">
+      <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="openModal(item)">
         <img :src="item.modalImg" :alt="item.modalImgName" class="new-year-card__img" width="372" height="248">
         <p class="new-year-card__text">{{ item.modalImgName }}</p>
       </a>
@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-    clickShowModal (item) {
+    openModal (item) {
       var html = document.getElementsByTagName('html')
       html[0].classList.add('no-scroll')
       this.showModal = true

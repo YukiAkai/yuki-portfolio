@@ -77,7 +77,7 @@ export default {
       transition: transform 0.2s;
       @media (hover: hover) {
         &:hover {
-          transform: scale(1.3);
+          transform: scale(1.2);
         }
       }
       .icon {
