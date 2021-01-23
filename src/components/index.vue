@@ -19,37 +19,37 @@ export default {
       items: [
         {
           title: 'DOYAGAERU',
-          path: '/doyagaeru',
+          path: '/doyagaeru/',
           img: require('../assets/img/top_doya.png')
         },
         {
           title: 'New Year’s Card',
-          path: '/new-year-card',
+          path: '/new-year-card/',
           img: require('../assets/img/top_new-year.png')
         },
         {
           title: 'Comic Symbols',
-          path: '/comic-symbols',
+          path: '/comic-symbols/',
           img: require('../assets/img/top_manpu.png')
         },
         {
           title: 'KYOTO SHRINE BATTLE !',
-          path: '/kyoto-shrine-battle',
+          path: '/kyoto-shrine-battle/',
           img: require('../assets/img/top_kyoto.png')
         },
         {
           title: 'Umania',
-          path: '/umania',
+          path: '/umania/',
           img: require('../assets/img/top_umania.png')
         },
         {
           title: 'Catooon House',
-          path: '/catooon-house',
+          path: '/catooon-house/',
           img: require('../assets/img/top_catooon.png')
         },
         {
           title: 'Processing',
-          path: '/processing',
+          path: '/processing/',
           img: require('../assets/img/top_processing.png')
         }
       ]
@@ -90,13 +90,13 @@ export default {
       margin-bottom: 25px;
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      &__img {
+        max-width: 100%;
+      }
       &__text {
         margin-top: 10px;
         font-weight: bold;
         text-align: center;
-      }
-      &__img {
-        max-width: 100%;
       }
     }
   }

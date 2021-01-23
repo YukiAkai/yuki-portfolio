@@ -21,9 +21,9 @@ export default {
     return {
       items: [
         { title: 'Top', path: '/', reg: '^/$' },
-        { title: 'Profile', path: 'profile', reg: '^/profile/?$' },
-        { title: 'Activity', path: 'activity', reg: '^/activity/?$' },
-        { title: 'Link', path: 'link', reg: '^/link/?$' }
+        { title: 'Profile', path: '/profile/', reg: '^/profile/?$' },
+        { title: 'Activity', path: '/activity/', reg: '^/activity/?$' },
+        { title: 'Link', path: '/link/', reg: '^/link/?$' }
       ]
     }
   },

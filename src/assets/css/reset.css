@@ -64,7 +64,10 @@ a {
 .text-link {
   text-decoration: underline;
 }
-
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 /* Mac Catalina用 */
 @font-face {
   font-family: "HiraginoSansCustom";
