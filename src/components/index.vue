@@ -114,6 +114,9 @@ export default {
       width: 47%;
       margin-right: 20px;
       margin-bottom: 20px;
+      @media screen and (max-width: 320px) {
+        margin-right: 15px;
+      }
       &:nth-child(even) {
         margin-right: 0;
       }

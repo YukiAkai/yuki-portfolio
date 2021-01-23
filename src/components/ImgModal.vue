@@ -1,7 +1,9 @@
 <template>
   <div class="modal modal__overlay" @click.self="clickCloseModal">
     <div :class="{ 'modal-box--sp': isSmartPhone }" class="modal__box modal-box">
-      <img :src="modalImg" :alt="modalImgName" class="modal-box__img">
+      <div class="modal-box__inner">
+        <img :src="modalImg" :alt="modalImgName" class="modal-box__img">
+      </div>
       <div class="modal-box__close" @click="clickCloseModal">
         <i class="icon icon-close"></i>
       </div>
@@ -44,14 +46,19 @@ export default {
     background-color: rgba(0, 0, 0, 0.2);
   }
   .modal-box {
+    $modal: ".modal-box";
     position: relative;
     z-index: 100;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     width: 410px;
     height: auto;
-    padding: 10px;
-    background: #fff;
+    &__inner {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      background: #fff;
+    }
     &__img {
       max-width: 100%;
     }
@@ -82,15 +89,16 @@ export default {
     }
     &--sp {
       width: 320px;
+      max-height: 80%;
+      #{$modal}__inner {
+        overflow-y: auto;
+      }
       @media screen and (max-width: 320px) {
         width: 260px;
       }
       // SP横向き
-      @media screen and (max-height: 575px) and (orientation: landscape) {
-        width: 210px;
-      }
-      @media screen and (max-height: 320px) and (orientation: landscape) {
-        width: 180px;
+      @media screen and (max-height: 569px) and (orientation: landscape) {
+        width: 420px;
       }
     }
   }
