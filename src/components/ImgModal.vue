@@ -88,7 +88,7 @@ export default {
       }
     }
     &--sp {
-      width: 320px;
+      width: 300px;
       max-height: 80%;
       #{$modal}__inner {
         overflow-y: auto;
