@@ -61,6 +61,11 @@ a {
     transition: opacity 0.15s;
   }
 }
+.text-link {
+  text-decoration: underline;
+}
+
+/* Mac Catalina用 */
 @font-face {
   font-family: "HiraginoSansCustom";
   font-weight: 100;

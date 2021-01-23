@@ -1,12 +1,36 @@
 <template>
-  <div class="page-comic">
-    Comming Soon...
+  <div :class="{ 'page-comic--sp': isSmartPhone }" class="page-comic">
+    <h1 class="page-comic__heading">漫符絵本</h1>
+    <div class="page-comic__catch comic-catch">
+      キャラクターに漫符を入力するとストーリーが動的に変化するインタラクティブなデジタル絵本システム
+      <a class="commic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">漫符絵本（プロトタイプなので未完成です…）</a>
+    </div>
+    <img class="page-comic__img" src="../assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
+    <h2 class="page-comic__sub-heading">概要</h2>
+    <div class="page-comic__detail">
+      提示された数種類の漫符の中からユーザが漫符を選択し、キャラクターに入力することでその漫符に適した感情や動作を表出させる。
+      さらに、漫符が付与可能な位置を指定して、同じ種類の漫符であっても付与する位置によって表現を変化させることもできる。
+      こうしたキャラクターの感情や動作の変化に応じて異なるストーリーを提示することができる。
+    </div>
+    <h2 class="page-comic__sub-heading">漫符とは…</h2>
+    <div class="page-comic__detail">
+      漫符とは、感情や様態を表現するコミック特有の記号表現であり、感情や状態を視覚的に表現する目的で主に利用されている (e.g. 汗マーク, 怒りマーク ect...) 。
+      これらはキャラクターの表情に付与することでその感情をより明確に示したり、強調したりすることができる。
+      さらに、後ろ姿や吹き出しの中に漫符を描くだけでも対象の心情が理解できるため、表情が描かれていなくても対象のコマ内のキャラクターの立ち位置やシーンの状況などが把握できるようになる。
+    </div>
+    <img class="page-comic__img" src="../assets/img/bebber.png" alt="bebberくん">
+    <h2 class="page-comic__sub-heading">開発言語</h2>
+    <div class="page-comic__detail">
+      Processing.js
+    </div>
   </div>
 </template>
 
 <script>
+import layoutMixin from '../mixins/layout'
 export default {
-  name: 'ComicSymbols'
+  name: 'ComicSymbols',
+  mixins: [layoutMixin]
 }
 </script>
 
@@ -16,5 +40,12 @@ export default {
   min-height: 350px;
   padding: 20px;
   margin: 0 auto;
+  &__heading,
+  &__sub-heading {
+    font-weight: bold;
+  }
+  &__heading {
+    font-size: 35px;
+  }
 }
 </style>
