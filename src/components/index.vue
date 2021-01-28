@@ -4,7 +4,6 @@
       <router-link v-for="(item, index) in items" :key="index" :to="item.path" class="top-content">
         <img :src="item.img" class="top-content__img">
         <p class="top-content__text">{{ item.title }}</p>
-        あああ
       </router-link>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <h1 class="page-comic__heading">漫符絵本</h1>
     <div class="page-comic__catch comic-catch">
       キャラクターに漫符を入力するとストーリーが動的に変化するインタラクティブなデジタル絵本システム
-      <br><a class="comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">こちらで遊べます（なお、未完成…）<i class="icon icon-arrow-right"></i></a>
+      <br><a class="comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます（なお、未完成…）<i class="icon icon-arrow-right"></i></a>
     </div>
     <img class="page-comic__img" src="../assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
     <h2 class="page-comic__sub-heading">概要</h2>
