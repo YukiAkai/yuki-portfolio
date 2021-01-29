@@ -5,7 +5,7 @@
       <p class="header-item__text">Yuki's Portfolio</p>
     </div>
     <ul class="header__menu header-menu">
-      <li v-for="(item, index) in items" :class="{ 'header-menu-item--current': isCurrentPath(item.reg) }" :key="index" class="header-menu__item header-menu-item">
+      <li v-for="(item, index) in items" :class="{ 'header-menu-item--current': isCurrentMenu(item.reg) }" :key="index" class="header-menu__item header-menu-item">
         <router-link :to="item.path" class="header-menu-item__link">{{ item.title }}</router-link>
       </li>
     </ul>
@@ -21,16 +21,16 @@ export default {
     return {
       items: [
         { title: 'Top', path: '/', reg: '^/$' },
-        { title: 'Profile', path: '/profile/', reg: '^/profile/?$' },
-        { title: 'Activity', path: '/activity/', reg: '^/activity/?$' },
-        { title: 'Link', path: '/link/', reg: '^/link/?$' }
+        { title: 'Profile', path: '/profile/', reg: '^/profile/$' },
+        { title: 'Activity', path: '/activity/', reg: '^/activity/$' },
+        { title: 'Link', path: '/link/', reg: '^/link/$' }
       ]
     }
   },
   methods: {
-    isCurrentPath (reg) {
-      const re = new RegExp(reg)
-      return this.$route.path.match(re)
+    isCurrentMenu (reg) {
+      const regexp = new RegExp(reg)
+      return this.$route.path.match(regexp)
     }
   }
 }
