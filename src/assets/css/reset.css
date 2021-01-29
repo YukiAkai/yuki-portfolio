@@ -55,47 +55,47 @@ a {
 }
 /* Mac Catalina用 */
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 100;
   src: local("HiraginoSans-W1"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 200;
   src: local("HiraginoSans-W2"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 300;
   src: local("HiraginoSans-W3"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 400;
   src: local("HiraginoSans-W3"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 500;
   src: local("HiraginoSans-W5"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 600;
   src: local("HiraginoSans-W6"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 700;
   src: local("HiraginoSans-W6"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 800;
   src: local("HiraginoSans-W7"), local("Hiragino Sans");
 }
 @font-face {
-  font-family: "HiraginoCustom";
+  font-family: "HiraginoSansCustom";
   font-weight: 900;
   src: local("HiraginoSans-W8"), local("Hiragino Sans");
 }
