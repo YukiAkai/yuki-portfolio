@@ -14,13 +14,11 @@ time, mark, audio, video {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font: inherit;
+  font-size: 100%;
+  font-weight: normal;
   vertical-align: baseline;
   border: 0;
-  font-feature-settings: "palt";
-  text-size-adjust: 100%;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -30,7 +28,7 @@ body {
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", HiraginoSansCustom, "Hiragino Sans", Meiryo, "メイリオ", Osaka, sans-serif, system-ui;
   font-size: 14px;
   line-height: 1.3;
-  color: #333;
+  color: #000;
   word-break: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -38,21 +36,8 @@ body {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
 a {
-  color: #333;
+  color: #000;
   text-decoration: none;
 }
 @media (hover: hover) {
@@ -70,55 +55,47 @@ a {
 }
 /* Mac Catalina用 */
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 100;
   src: local("HiraginoSans-W1"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 200;
   src: local("HiraginoSans-W2"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 300;
   src: local("HiraginoSans-W3"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 400;
   src: local("HiraginoSans-W3"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 500;
-  src: local("HiraginoSans-W4"), local("Hiragino Sans");
-}
-
-@font-face {
-  font-family: "HiraginoSansCustom";
-  font-weight: 600;
   src: local("HiraginoSans-W5"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
+  font-weight: 600;
+  src: local("HiraginoSans-W6"), local("Hiragino Sans");
+}
+@font-face {
+  font-family: "HiraginoCustom";
   font-weight: 700;
   src: local("HiraginoSans-W6"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 800;
   src: local("HiraginoSans-W7"), local("Hiragino Sans");
 }
-
 @font-face {
-  font-family: "HiraginoSansCustom";
+  font-family: "HiraginoCustom";
   font-weight: 900;
   src: local("HiraginoSans-W8"), local("Hiragino Sans");
 }

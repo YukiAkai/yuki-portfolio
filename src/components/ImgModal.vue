@@ -72,7 +72,7 @@ export default {
       width: 35px;
       height: 35px;
       cursor: pointer;
-      background: #333;
+      background: #000;
       border-radius: 50%;
       transition: transform 0.2s;
       @media (hover: hover) {
