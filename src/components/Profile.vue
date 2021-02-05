@@ -14,6 +14,17 @@
         </p>
       </div>
     </div>
+    <div class="sns-block">
+      <a target="_blank" href="https://twitter.com/626_ace" class="sns-block__logo">
+        <img src="../assets/svg/logo-twitter.svg" alt="Twitter" width="50" height="50">
+      </a>
+      <a target="_blank" href="https://www.facebook.com/profile.php?id=100005509020635" class="sns-block__logo">
+        <img src="../assets/svg/logo-facebook.svg" alt="Facebook" width="50" height="50">
+      </a>
+      <a target="_blank" href="https://github.com/YukiAkai" class="sns-block__logo">
+        <img src="../assets/svg/logo-github.svg" alt="GitHub" width="50" height="50">
+      </a>
+    </div>
     <div class="skill-block">
       <h2 class="skill-block__heading"><i class="icon icon-pc"></i>Skill</h2>
       <div class="skill-block__inner">
@@ -72,15 +83,6 @@ export default {
       background-image: url("../assets/svg/icon-profile.svg");
     }
   }
-  .skill-block,
-  .contents-skill {
-    &__heading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-  }
   .profile-block {
     display: flex;
     align-items: center;
@@ -97,8 +99,30 @@ export default {
       }
     }
   }
+  .sns-block,
   .skill-block {
     margin-top: 40px;
+  }
+  .sns-block {
+    $sns: ".sns-block";
+    display: flex;
+    justify-content: center;
+    &__logo {
+      &+#{$sns}__logo {
+        margin-left: 20px;
+      }
+    }
+  }
+  .skill-block,
+  .contents-skill {
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  }
+  .skill-block {
     &__heading {
       margin-bottom: 20px;
       font-size: 30px;

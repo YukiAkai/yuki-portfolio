@@ -40,13 +40,7 @@ a {
   color: #000;
   text-decoration: none;
 }
-@media (hover: hover) {
-  a:hover {
-    opacity: 0.7;
-    transition: opacity 0.15s;
-  }
-}
-.text-link {
+.text-link:hover {
   text-decoration: underline;
 }
 .no-scroll {

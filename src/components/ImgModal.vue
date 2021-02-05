@@ -1,5 +1,5 @@
 <template>
-  <div class="modal modal__overlay" @click.self="clickCloseModal">
+  <div class="modal modal-overlay" @click.self="clickCloseModal">
     <div :class="{ 'modal-box--sp': isSmartPhone }" class="modal__box modal-box">
       <div class="modal-box__inner">
         <img :src="modalImg" :alt="modalImgName" class="modal-box__img">
@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .modal {
-  &__overlay {
+  &-overlay {
     position: fixed;
     top: 0;
     left: 0;

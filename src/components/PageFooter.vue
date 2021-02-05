@@ -2,7 +2,7 @@
   <div
     :class="{ 'footer--sp': isSmartPhone }"
     class="footer">
-    <small class="footer__text">© 2021 Yuki Akai</small>
+    <small class="footer__text">&copy; 2021 Yuki Akai</small>
   </div>
 </template>
 
