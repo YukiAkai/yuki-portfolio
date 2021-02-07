@@ -2,7 +2,7 @@
   <div class="modal modal-overlay" @click.self="clickCloseModal">
     <div :class="{ 'modal-box--sp': isSmartPhone }" class="modal__box modal-box">
       <div class="modal-box__inner">
-        <img :src="require('@/assets/img/new-year/' + imgSrc)" :alt="imgAlt" class="modal-box__img">
+        <img :src="require('@/assets/img/new-year/' + imgSrc + '.png')" :alt="imgName" class="modal-box__img">
       </div>
       <div class="modal-box__close" @click="clickCloseModal">
         <i class="icon icon-close"></i>
@@ -19,7 +19,7 @@ export default {
       type: String,
       default: ''
     },
-    imgAlt: {
+    imgName: {
       type: String,
       default: ''
     }

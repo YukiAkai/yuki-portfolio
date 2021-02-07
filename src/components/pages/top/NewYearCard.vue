@@ -2,12 +2,12 @@
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
     <div class="page-new-year__contents">
       <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="openModal(item)">
-        <img :src="require('@/assets/img/new-year/' + item.imgSrc)" :alt="item.imgAlt" class="new-year-card__img" width="372" height="248">
-        <p class="new-year-card__text">{{ item.imgAlt }}</p>
+        <img :src="require('@/assets/img/new-year/' + item.imgSrc + '.png')" :alt="item.imgName" class="new-year-card__img" width="372" height="248">
+        <p class="new-year-card__text">{{ item.imgName }}</p>
       </a>
     </div>
     <transition name="fade">
-      <img-modal v-if="showModal" :imgSrc="imgSrc" :imgAlt="imgAlt" @clickCloseModal="closeModal()"/>
+      <img-modal v-if="showModal" :imgSrc="imgSrc" :imgName="imgName" @clickCloseModal="closeModal()"/>
     </transition>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
     return {
       showModal: false,
       imgSrc: '',
-      imgAlt: '',
+      imgName: '',
       items: NewYearCard
     }
   },
@@ -36,7 +36,7 @@ export default {
       html[0].classList.add('no-scroll')
       this.showModal = true
       this.imgSrc = item.imgSrc
-      this.imgAlt = item.imgAlt
+      this.imgName = item.imgName
     },
     closeModal () {
       var html = document.getElementsByTagName('html')

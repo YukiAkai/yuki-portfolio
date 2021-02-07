@@ -1,5 +1,5 @@
 <template>
-  <div class="page-pro-map">
+  <div class="page-catooon">
     Comming Soon...
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-pro-map {
+.page-catooon {
   width: 990px;
   min-height: 350px;
   padding: 20px;
