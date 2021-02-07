@@ -2,12 +2,12 @@
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
     <div class="page-new-year__contents">
       <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="openModal(item)">
-        <img :src="item.modalImg" :alt="item.modalImgName" class="new-year-card__img" width="372" height="248">
-        <p class="new-year-card__text">{{ item.modalImgName }}</p>
+        <img :src="item.imgSrc" :alt="item.imgAlt" class="new-year-card__img" width="372" height="248">
+        <p class="new-year-card__text">{{ item.imgAlt }}</p>
       </a>
     </div>
     <transition name="fade">
-      <img-modal v-if="showModal" :modalImg="modalImg" :modalImgName="modalImgName" @clickCloseModal="closeModal()"/>
+      <img-modal v-if="showModal" :imgSrc="imgSrc" :imgAlt="imgAlt" @clickCloseModal="closeModal()"/>
     </transition>
   </div>
 </template>
@@ -24,24 +24,24 @@ export default {
   data () {
     return {
       showModal: false,
-      modalImg: '',
-      modalImgName: '',
+      imgSrc: '',
+      imgAlt: '',
       items: [
         {
-          modalImg: require('../assets/img/new-year/2021.png'),
-          modalImgName: '2021'
+          imgSrc: require('../assets/img/new-year/2021.png'),
+          imgAlt: '2021'
         },
         {
-          modalImg: require('../assets/img/new-year/2020.png'),
-          modalImgName: '2020'
+          imgSrc: require('../assets/img/new-year/2020.png'),
+          imgAlt: '2020'
         },
         {
-          modalImg: require('../assets/img/new-year/2019.png'),
-          modalImgName: '2019'
+          imgSrc: require('../assets/img/new-year/2019.png'),
+          imgAlt: '2019'
         },
         {
-          modalImg: require('../assets/img/new-year/2018.png'),
-          modalImgName: '2018'
+          imgSrc: require('../assets/img/new-year/2018.png'),
+          imgAlt: '2018'
         }
       ]
     }
@@ -51,8 +51,8 @@ export default {
       var html = document.getElementsByTagName('html')
       html[0].classList.add('no-scroll')
       this.showModal = true
-      this.modalImg = item.modalImg
-      this.modalImgName = item.modalImgName
+      this.imgSrc = item.imgSrc
+      this.imgAlt = item.imgAlt
     },
     closeModal () {
       var html = document.getElementsByTagName('html')

@@ -23,7 +23,7 @@ export default {
           img: require('../assets/img/top_doya.png')
         },
         {
-          title: 'New Year’s Card',
+          title: 'New Year Card',
           path: '/new-year-card/',
           img: require('../assets/img/top_new-year.png')
         },
