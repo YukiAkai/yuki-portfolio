@@ -10,8 +10,8 @@
 
 <script>
 import layoutMixin from './mixins/layout'
-import PageHeader from './components/PageHeader'
-import PageFooter from './components/PageFooter'
+import PageHeader from './components/common/PageHeader'
+import PageFooter from './components/common/PageFooter'
 export default {
   name: 'App',
   components: {

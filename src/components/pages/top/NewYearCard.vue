@@ -2,7 +2,7 @@
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
     <div class="page-new-year__contents">
       <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="openModal(item)">
-        <img :src="item.imgSrc" :alt="item.imgAlt" class="new-year-card__img" width="372" height="248">
+        <img :src="require('@/assets/img/new-year/' + item.imgSrc)" :alt="item.imgAlt" class="new-year-card__img" width="372" height="248">
         <p class="new-year-card__text">{{ item.imgAlt }}</p>
       </a>
     </div>
@@ -13,8 +13,9 @@
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
-import ImgModal from './ImgModal.vue'
+import layoutMixin from '@/mixins/layout'
+import ImgModal from '../../common/ImgModal.vue'
+import NewYearCard from '@/assets/data/newYearCard.json'
 export default {
   name: 'NewYearCard',
   mixins: [layoutMixin],
@@ -26,24 +27,7 @@ export default {
       showModal: false,
       imgSrc: '',
       imgAlt: '',
-      items: [
-        {
-          imgSrc: require('../assets/img/new-year/2021.png'),
-          imgAlt: '2021'
-        },
-        {
-          imgSrc: require('../assets/img/new-year/2020.png'),
-          imgAlt: '2020'
-        },
-        {
-          imgSrc: require('../assets/img/new-year/2019.png'),
-          imgAlt: '2019'
-        },
-        {
-          imgSrc: require('../assets/img/new-year/2018.png'),
-          imgAlt: '2018'
-        }
-      ]
+      items: NewYearCard
     }
   },
   methods: {

@@ -2,7 +2,7 @@
   <div :class="{ 'page-profile--sp': isSmartPhone }" class="page-profile">
     <h1 class="page-profile__heading"><i class="icon icon-profile"></i>Profile</h1>
     <div class="profile-block">
-      <img class="profile-block__img" src="../assets/img/profile_yuki.png" alt="Yuki Akai">
+      <img class="profile-block__img" src="@/assets/img/profile_yuki.png" alt="Yuki Akai">
       <div class="profile-block__text profile-block-text">
         <p class="profile-block-text__name">Yuki Akai</p>
         <p class="profile-block-text__detail">
@@ -16,13 +16,13 @@
     </div>
     <div class="sns-block">
       <a target="_blank" href="https://twitter.com/626_ace" class="sns-block__logo">
-        <img src="../assets/svg/logo-twitter.svg" alt="Twitter" width="50" height="50">
+        <img src="../../assets/svg/logo-twitter.svg" alt="Twitter" width="50" height="50">
       </a>
       <a target="_blank" href="https://www.facebook.com/profile.php?id=100005509020635" class="sns-block__logo">
-        <img src="../assets/svg/logo-facebook.svg" alt="Facebook" width="50" height="50">
+        <img src="../../assets/svg/logo-facebook.svg" alt="Facebook" width="50" height="50">
       </a>
       <a target="_blank" href="https://github.com/YukiAkai" class="sns-block__logo">
-        <img src="../assets/svg/logo-github.svg" alt="GitHub" width="50" height="50">
+        <img src="../../assets/svg/logo-github.svg" alt="GitHub" width="50" height="50">
       </a>
     </div>
     <div class="skill-block">
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
+import layoutMixin from '@/mixins/layout'
 export default {
   name: 'Profile',
   mixins: [layoutMixin]
@@ -80,7 +80,7 @@ export default {
     .icon {
       width: 35px;
       height: 35px;
-      background-image: url("../assets/svg/icon-profile.svg");
+      background-image: url("../../assets/svg/icon-profile.svg");
     }
   }
   .profile-block {
@@ -129,7 +129,7 @@ export default {
       .icon {
         width: 30px;
         height: 30px;
-        background-image: url("../assets/svg/icon-pc.svg");
+        background-image: url("../../assets/svg/icon-pc.svg");
       }
     }
     &__inner {
@@ -146,11 +146,11 @@ export default {
           height: 25px;
           &.icon-code {
             width: 25px;
-            background-image: url("../assets/svg/icon-code.svg");
+            background-image: url("../../assets/svg/icon-code.svg");
           }
           &.icon-js {
             width: 23px;
-            background-image: url("../assets/svg/icon-js.svg");
+            background-image: url("../../assets/svg/icon-js.svg");
           }
         }
       }

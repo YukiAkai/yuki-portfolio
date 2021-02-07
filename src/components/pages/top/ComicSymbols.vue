@@ -5,7 +5,7 @@
       キャラクターに漫符を入力するとストーリーが動的に変化するインタラクティブなデジタル絵本システム
       <br><a class="comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます（なお、未完成…）<i class="icon icon-arrow-right"></i></a>
     </div>
-    <img class="page-comic__img" src="../assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
+    <img class="page-comic__img" src="@/assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
     <h2 class="page-comic__sub-heading">概要</h2>
     <div class="page-comic__detail">
       提示された数種類の漫符の中からユーザが漫符を選択し、キャラクターに入力することでその漫符に適した感情や動作を表出させる。
@@ -23,12 +23,12 @@
       さらに、後ろ姿や吹き出しの中に漫符を描くだけでも対象の心情が理解できるため、表情が描かれていなくても対象のコマ内のキャラクターの立ち位置やシーンの状況などが把握できるようになる。
       <br><router-link to="/link/" class="comic-detail__link text-link">執筆した漫符に関する研究論文<i class="icon icon-arrow-right"></i></router-link>
     </div>
-    <img class="page-comic__img" src="../assets/img/bebber.png" alt="bebberくん">
+    <img class="page-comic__img" src="@/assets/img/bebber.png" alt="bebberくん">
   </div>
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
+import layoutMixin from '@/mixins/layout'
 export default {
   name: 'ComicSymbols',
   mixins: [layoutMixin]
@@ -44,7 +44,7 @@ export default {
   margin: 0 auto;
   .icon {
     margin-left: 6px;
-    background-image: url("../assets/svg/icon-arrow-right.svg");
+    background-image: url("~/assets/svg/icon-arrow-right.svg");
     background-size: 100%;
   }
   &__heading,

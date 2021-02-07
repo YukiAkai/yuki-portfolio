@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'header--sp': isSmartPhone }" class="header">
     <div class="header__item header-item">
-      <img class="header-item__img" src="../assets/img/header.png">
+      <img class="header-item__img" src="@/assets/img/header.png">
       <p class="header-item__text">Yuki's Portfolio</p>
     </div>
     <ul class="header__menu header-menu">
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
+import layoutMixin from '@/mixins/layout'
 export default {
   name: 'PageHeader',
   mixins: [layoutMixin],

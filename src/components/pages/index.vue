@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
+import layoutMixin from '@/mixins/layout'
 export default {
   name: 'Top',
   mixins: [layoutMixin],
@@ -20,37 +20,37 @@ export default {
         {
           title: 'DOYAGAERU',
           path: '/doyagaeru/',
-          img: require('../assets/img/top_doya.png')
+          img: require('@/assets/img/top_doya.png')
         },
         {
           title: 'New Year Card',
           path: '/new-year-card/',
-          img: require('../assets/img/top_new-year.png')
+          img: require('@/assets/img/top_new-year.png')
         },
         {
           title: 'Comic Symbols',
           path: '/comic-symbols/',
-          img: require('../assets/img/top_manpu.png')
+          img: require('@/assets/img/top_manpu.png')
         },
         {
           title: 'KYOTO SHRINE BATTLE !',
           path: '/kyoto-shrine-battle/',
-          img: require('../assets/img/top_kyoto.png')
+          img: require('@/assets/img/top_kyoto.png')
         },
         {
           title: 'Umania',
           path: '/umania/',
-          img: require('../assets/img/top_umania.png')
+          img: require('@/assets/img/top_umania.png')
         },
         {
           title: 'Catooon House',
           path: '/catooon-house/',
-          img: require('../assets/img/top_catooon.png')
+          img: require('@/assets/img/top_catooon.png')
         },
         {
           title: 'Processing',
           path: '/processing/',
-          img: require('../assets/img/top_processing.png')
+          img: require('@/assets/img/top_processing.png')
         }
       ]
     }

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import layoutMixin from '../mixins/layout'
+import layoutMixin from '@/mixins/layout'
 export default {
   name: 'PageFooter',
   mixins: [layoutMixin]
