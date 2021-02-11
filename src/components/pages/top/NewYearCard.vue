@@ -1,14 +1,19 @@
 <template>
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
-    <div class="page-new-year__contents">
-      <a v-for="(item, index) in items" :key="index" href="javascript:void(0)" class="new-year-card" @click="openModal(item)">
-        <img :src="require('@/assets/img/new-year/' + item.imgSrc + '.png')" :alt="item.imgName" class="new-year-card__img" width="372" height="248">
-        <p class="new-year-card__text">{{ item.imgName }}</p>
-      </a>
-    </div>
+    <h1 class="page-new-year__heading">年賀状イラスト</h1>
+    <p class="page-new-year__note">
+      年賀状およびSNSでの新年の挨拶用のイラスト
+    </p>
+    <ul class="page-new-year__list new-year-card">
+      <li v-for="(item, index) in items" :key="index" class="new-year-card__item card-item" @click="openModal(item)">
+        <img :src="require('@/assets/img/new-year/' + item.imgSrc + '.png')" :alt="item.imgName" class="card-item__img" width="372" height="248">
+        <p class="card-item__text">{{ item.imgName }}</p>
+      </li>
+    </ul>
     <transition name="fade">
       <img-modal v-if="showModal" :imgSrc="imgSrc" :imgName="imgName" @clickCloseModal="closeModal()"/>
     </transition>
+    <router-link to="/" class="page-new-year__top-link text-link"><i class="icon icon-arrow-left"></i>PAGE TOP</router-link>
   </div>
 </template>
 
@@ -52,13 +57,21 @@ export default {
   $this: &;
   width: 990px;
   min-height: 350px;
-  padding: 30px 20px 10px;
+  padding: 30px 20px;
   margin: 0 auto;
-  &__contents {
+  &__heading {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__note {
+    margin-bottom: 30px;
+  }
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .new-year-card {
+    .card-item {
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -67,6 +80,7 @@ export default {
       width: 220px;
       padding: 10px 10px 40px;
       margin-bottom: 25px;
+      cursor: pointer;
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       &__img {
@@ -81,11 +95,26 @@ export default {
       }
     }
   }
+  &__top-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      background-image: url("../../../assets/svg/icon-arrow-left.svg");
+      background-size: 100%;
+    }
+  }
   &--sp {
     width: auto;
-    padding: 30px 4% 10px;
-    #{$this}__contents {
-      .new-year-card {
+    padding: 20px 4%;
+    #{$this}__heading {
+      font-size: 25px;
+    }
+    #{$this}__list {
+      .card-item {
         justify-content: center;
         width: 47%;
         padding-bottom: 30px;
@@ -102,6 +131,9 @@ export default {
           font-size: 10px;
         }
       }
+    }
+    #{$this}__top-link {
+      margin-top: 20px;
     }
   }
   // モーダルのアニメーション

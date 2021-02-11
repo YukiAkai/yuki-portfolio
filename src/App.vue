@@ -2,7 +2,7 @@
   <div id="app" :class="isSmartPhone ? 'wrapper-sp' : 'wrapper'">
     <div class="contents-wrapper">
       <page-header />
-      <router-view/>
+      <router-view />
       <page-footer />
     </div>
   </div>

@@ -4,7 +4,7 @@
       <img class="header-item__img" src="@/assets/img/header.png">
       <p class="header-item__text">Yuki's Portfolio</p>
     </div>
-    <ul class="header__menu header-menu">
+    <ul :class="{ 'header-menu--fixed': isSmartPhone && scrollY > 122 }" class="header__menu header-menu">
       <li v-for="(item, index) in items" :class="{ 'header-menu-item--current': isCurrentMenu(item.reg) }" :key="index" class="header-menu__item header-menu-item">
         <router-link :to="item.path" class="header-menu-item__link">{{ item.title }}</router-link>
       </li>
@@ -24,13 +24,20 @@ export default {
         { title: 'Profile', path: '/profile/', reg: '^/profile/$' },
         { title: 'Activity', path: '/activity/', reg: '^/activity/$' },
         { title: 'Link', path: '/link/', reg: '^/link/$' }
-      ]
+      ],
+      scrollY: 0
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     isCurrentMenu (reg) {
       const regexp = new RegExp(reg)
       return this.$route.path.match(regexp)
+    },
+    handleScroll () {
+      this.scrollY = window.scrollY
     }
   }
 }
@@ -52,7 +59,7 @@ export default {
       font-weight: bold;
     }
   }
-  &__menu {
+  .header-menu {
     display: flex;
     list-style: none;
     .header-menu-item {
@@ -87,9 +94,22 @@ export default {
         font-size: 22px;
       }
     }
-    .header-menu-item {
-      &__link {
-        font-size: 14px;
+    .header-menu {
+      &__img {
+        width: auto;
+        height: 122px;
+      }
+      .header-menu-item {
+        &__link {
+          font-size: 14px;
+        }
+      }
+      &--fixed {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        max-width: 420px;
       }
     }
   }

@@ -1,11 +1,13 @@
 <template>
   <div :class="{ 'page-top--sp': isSmartPhone }" class="page-top">
-    <div class="page-top__contents">
-      <router-link v-for="(item, index) in items" :key="index" :to="item.path" class="top-content">
-        <img :src="item.img" class="top-content__img">
-        <p class="top-content__text">{{ item.title }}</p>
-      </router-link>
-    </div>
+    <ul class="page-top__list page-top-list">
+      <li v-for="(item, index) in items" :key="index" class="page-top-list__item">
+        <router-link :to="item.path" class="list-item">
+          <img :src="item.img" class="list-item__img">
+          <p class="list-item__text">{{ item.title }}</p>
+        </router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -60,12 +62,11 @@ export default {
 
 <style lang="scss" scoped>
 .page-top {
-  $this: &;
   max-width: 990px;
   min-height: 350px;
   padding: 30px 20px 10px;
   margin: 0 auto;
-  &__contents {
+  .page-top-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -79,7 +80,7 @@ export default {
     &:before {
       order: 1;
     }
-    .top-content {
+    &__item {
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -90,38 +91,42 @@ export default {
       margin-bottom: 25px;
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      &__img {
-        max-width: 100%;
-      }
-      &__text {
-        margin-top: 10px;
-        font-weight: bold;
-        text-align: center;
+      .list-item {
+        &__img {
+          max-width: 100%;
+        }
+        &__text {
+          margin-top: 10px;
+          font-weight: bold;
+          text-align: center;
+        }
       }
     }
   }
   &--sp {
     width: auto;
     padding: 30px 4% 10px;
-    #{$this}__contents {
+    .page-top-list {
       &:before,
       &:after {
         content: none;
       }
-    }
-    .top-content {
-      justify-content: center;
-      width: 47%;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      @media screen and (max-width: 320px) {
-        margin-right: 15px;
-      }
-      &:nth-child(even) {
-        margin-right: 0;
-      }
-      &__text {
-        font-size: 10px;
+      &__item {
+        justify-content: center;
+        width: 47%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 320px) {
+          margin-right: 15px;
+        }
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        .list-item {
+          &__text {
+            font-size: 10px;
+          }
+        }
       }
     }
   }

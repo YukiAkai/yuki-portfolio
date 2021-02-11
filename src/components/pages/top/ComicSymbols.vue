@@ -1,9 +1,9 @@
 <template>
   <div :class="{ 'page-comic--sp': isSmartPhone }" class="page-comic">
     <h1 class="page-comic__heading">漫符絵本</h1>
-    <div class="page-comic__catch comic-catch">
+    <div class="page-comic__catch page-comic-catch">
       キャラクターに漫符を入力するとストーリーが動的に変化するインタラクティブなデジタル絵本システム
-      <br><a class="comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます（なお、未完成…）<i class="icon icon-arrow-right"></i></a>
+      <br><a class="page-comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます<i class="icon icon-arrow-right"></i></a>
     </div>
     <img class="page-comic__img" src="@/assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
     <h2 class="page-comic__sub-heading">概要</h2>
@@ -16,14 +16,17 @@
     <div class="page-comic__detail">
       Processing.js
     </div>
-    <h2 class="page-comic__sub-heading">漫符とは…</h2>
-    <div class="page-comic__detail comic-detail">
-      漫符とは、感情や様態を表現するコミック特有の記号表現であり、感情や状態を視覚的に表現する目的で主に利用されている (e.g. 汗マーク, 怒りマーク ect...) 。
-      これらはキャラクターの表情に付与することでその感情をより明確に示したり、強調したりすることができる。
-      さらに、後ろ姿や吹き出しの中に漫符を描くだけでも対象の心情が理解できるため、表情が描かれていなくても対象のコマ内のキャラクターの立ち位置やシーンの状況などが把握できるようになる。
-      <br><router-link to="/link/" class="comic-detail__link text-link">執筆した漫符に関する研究論文<i class="icon icon-arrow-right"></i></router-link>
+    <div class="page-comic__description page-comic-description">
+      <h2 class="page-comic-description__heading">漫符とは…</h2>
+      <div class="page-comic-description__detail description-detail">
+        漫符とは、感情や様態を表現するコミック特有の記号表現であり、感情や状態を視覚的に表現する目的で主に利用されている (e.g. 汗マーク, 怒りマーク ect...) 。
+        これらはキャラクターの表情に付与することでその感情をより明確に示したり、強調したりすることができる。
+        さらに、後ろ姿や吹き出しの中に漫符を描くだけでも対象の心情が理解できるため、表情が描かれていなくても対象のコマ内のキャラクターの立ち位置やシーンの状況などが把握できるようになる。
+        <br><router-link to="/link/" class="description-detail__link text-link">執筆した漫符に関する研究論文<i class="icon icon-arrow-right"></i></router-link>
+      </div>
+      <img class="page-comic-description__img" src="@/assets/img/bebber.png" alt="bebberくん">
     </div>
-    <img class="page-comic__img" src="@/assets/img/bebber.png" alt="bebberくん">
+    <router-link to="/" class="page-comic__top-link text-link"><i class="icon icon-arrow-left"></i>PAGE TOP</router-link>
   </div>
 </template>
 
@@ -40,11 +43,9 @@ export default {
   $this: &;
   width: 990px;
   min-height: 350px;
-  padding: 30px 20px 0;
+  padding: 30px 20px;
   margin: 0 auto;
   .icon {
-    margin-left: 6px;
-    background-image: url("~/assets/svg/icon-arrow-right.svg");
     background-size: 100%;
   }
   &__heading,
@@ -53,14 +54,20 @@ export default {
     font-weight: bold;
   }
   &__heading {
-    font-size: 35px;
+    font-size: 30px;
   }
   &__sub-heading {
     margin: 30px 0 10px;
     font-size: 18px;
   }
-  .comic-catch,
-  .comic-detail {
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+  }
+  .page-comic-catch,
+  .description-detail {
     &__link {
       display: inline-flex;
       align-items: center;
@@ -70,32 +77,64 @@ export default {
       .icon {
         width: 18px;
         height: 18px;
+        margin-left: 6px;
+        background-image: url("../../../assets/svg/icon-arrow-right.svg");
       }
     }
   }
-  .comic-catch {
+  .page-comic-catch {
     font-size: 18px;
     font-weight: bold;
   }
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 30px auto;
+  .page-comic-description {
+    padding: 20px;
+    margin-top: 30px;
+    background: #eee;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    &__heading {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__img {
+      display: block;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+  }
+  &__top-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 40px;
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      background-image: url("../../../assets/svg/icon-arrow-left.svg");
+    }
   }
   &--sp {
     width: auto;
     padding: 20px;
     #{$this}__heading {
-      font-size: 30px;
+      font-size: 25px;
     }
-    .comic-catch,
-    .comic-detail {
+    .page-comic-catch,
+    .description-detail {
       &__link {
         font-size: 16px;
+        @media screen and (max-width: 320px) {
+          font-size: 14px;
+        }
+        .icon {
+          @media screen and (max-width: 320px) {
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
-    .comic-catch {
+    .page-comic-catch {
       font-size: 16px;
     }
   }
