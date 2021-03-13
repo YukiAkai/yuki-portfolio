@@ -2,7 +2,7 @@
   <div :class="{ 'page-new-year--sp': isSmartPhone }" class="page-new-year">
     <h1 class="page-new-year__heading">年賀状イラスト</h1>
     <p class="page-new-year__note">
-      年賀状およびSNSでの新年の挨拶用のイラスト
+      年賀状&SNSでの新年の挨拶用のイラスト
     </p>
     <ul class="page-new-year__list new-year-card">
       <li v-for="(item, index) in items" :key="index" class="new-year-card__item card-item" @click="openModal(item)">
@@ -11,7 +11,7 @@
       </li>
     </ul>
     <transition name="fade">
-      <img-modal v-if="showModal" :imgSrc="imgSrc" :imgName="imgName" @clickCloseModal="closeModal()"/>
+      <img-modal v-if="showModal" :imgDirectory="imgDirectory" :imgSrc="imgSrc" :imgName="imgName" @clickCloseModal="closeModal()"/>
     </transition>
     <router-link to="/" class="page-new-year__top-link text-link"><i class="icon icon-arrow-left"></i>PAGE TOP</router-link>
   </div>
@@ -30,6 +30,7 @@ export default {
   data () {
     return {
       showModal: false,
+      imgDirectory: 'new-year/',
       imgSrc: '',
       imgName: '',
       items: NewYearCard
@@ -40,6 +41,7 @@ export default {
       var html = document.getElementsByTagName('html')
       html[0].classList.add('no-scroll')
       this.showModal = true
+      this.imgDirectory = this.imgDirectory
       this.imgSrc = item.imgSrc
       this.imgName = item.imgName
     },
@@ -111,7 +113,7 @@ export default {
     width: auto;
     padding: 20px 4%;
     #{$this}__heading {
-      font-size: 25px;
+      font-size: 24px;
     }
     #{$this}__list {
       .card-item {

@@ -5,7 +5,6 @@ import Top from '../components/pages/index'
 import Profile from '../components/pages/Profile'
 import Activity from '../components/pages/Activity'
 import Link from '../components/pages/Link'
-import Doyagaeru from '../components/pages/top/Doyagaeru'
 import ComicSymbols from '../components/pages/top/ComicSymbols'
 import KyotoShrineBattle from '../components/pages/top/KyotoShrineBattle'
 import Umania from '../components/pages/top/Umania'
@@ -37,11 +36,6 @@ export default new Router({
       path: '/link',
       name: 'Link',
       component: Link
-    },
-    {
-      path: '/doyagaeru',
-      name: 'Doyagaeru',
-      component: Doyagaeru
     },
     {
       path: '/new-year-card',

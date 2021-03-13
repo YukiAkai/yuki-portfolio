@@ -117,7 +117,7 @@ export default {
     width: auto;
     padding: 20px;
     #{$this}__heading {
-      font-size: 25px;
+      font-size: 24px;
     }
     .page-comic-catch,
     .description-detail {

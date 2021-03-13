@@ -2,7 +2,7 @@
   <div class="modal modal-overlay" @click.self="clickCloseModal">
     <div :class="{ 'modal-box--sp': isSmartPhone }" class="modal__box modal-box">
       <div class="modal-box__inner">
-        <img :src="require('@/assets/img/new-year/' + imgSrc + '.png')" :alt="imgName" class="modal-box__img">
+        <img :src="require('@/assets/img/' + imgDirectory + imgSrc + '.png')" :alt="imgName" class="modal-box__img">
       </div>
       <div class="modal-box__close" @click="clickCloseModal">
         <i class="icon icon-close"></i>
@@ -15,6 +15,10 @@ import layoutMixin from '@/mixins/layout'
 export default {
   mixins: [layoutMixin],
   props: {
+    imgDirectory: {
+      type: String,
+      default: ''
+    },
     imgSrc: {
       type: String,
       default: ''
@@ -54,8 +58,6 @@ export default {
     width: 410px;
     height: auto;
     &__inner {
-      display: flex;
-      align-items: flex-start;
       padding: 10px;
       background: #fff;
     }

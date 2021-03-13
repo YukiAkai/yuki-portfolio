@@ -141,15 +141,15 @@ export default {
       background: #eee;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       &__heading {
-        font-size: 25px;
+        font-size: 24px;
         .icon {
-          height: 25px;
+          height: 24px;
           &.icon-code {
-            width: 25px;
+            width: 24px;
             background-image: url("../../assets/svg/icon-code.svg");
           }
           &.icon-js {
-            width: 23px;
+            width: 22px;
             background-image: url("../../assets/svg/icon-js.svg");
           }
         }
@@ -204,10 +204,10 @@ export default {
     }
     .skill-block {
       &__heading {
-        font-size: 25px;
+        font-size: 24px;
         .icon {
-          width: 25px;
-          height: 25px;
+          width: 24px;
+          height: 24px;
         }
       }
       .contents-skill {
