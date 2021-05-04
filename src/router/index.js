@@ -67,5 +67,11 @@ export default new Router({
       name: 'Processing',
       component: Processing
     }
-  ]
+  ],
+  scrollBehavior () {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })
