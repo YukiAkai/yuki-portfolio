@@ -28,7 +28,7 @@
       <h1 class="character-desigin__heading">キャラクターデザイン集</h1>
       <ul class="character-desigin__list character-desigin-list">
         <li v-for="(item, index) in items" :key="index" class="character-desigin-list__item character-desigin-item" @click="openModal(item)">
-          <img :src="require('@/assets/img/kyoto/' + item.imgSrc + '.png')" :alt="item.imgName" class="character-desigin-item__img" width="372" height="248">
+          <img v-lazy="require('@/assets/img/kyoto/' + item.imgSrc + '.png')" :alt="item.imgName" class="character-desigin-item__img" width="372" height="248">
           <p class="character-desigin-item__text">{{ item.imgName }}</p>
         </li>
       </ul>

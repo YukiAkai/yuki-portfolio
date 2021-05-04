@@ -8,7 +8,7 @@
           :href="isInternalLink(item.path) ? '' : item.path"
           class="top-item"
         >
-          <img :src="item.img" class="top-item__img">
+          <img v-lazy="item.img" class="top-item__img">
           <p class="top-item__text">{{ item.title }}</p>
         </component>
       </li>
@@ -125,7 +125,6 @@ export default {
       &__item {
         justify-content: center;
         width: 47%;
-        margin-right: 20px;
         margin-bottom: 20px;
         @media screen and (max-width: 320px) {
           margin-right: 15px;

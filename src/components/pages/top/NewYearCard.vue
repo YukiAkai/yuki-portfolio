@@ -6,7 +6,7 @@
     </p>
     <ul class="page-new-year__list new-year-card">
       <li v-for="(item, index) in items" :key="index" class="new-year-card__item card-item" @click="openModal(item)">
-        <img :src="require('@/assets/img/new-year/' + item.imgSrc + '.png')" :alt="item.imgName" class="card-item__img" width="372" height="248">
+        <img v-lazy="require('@/assets/img/new-year/' + item.imgSrc + '.png')" :alt="item.imgName" class="card-item__img" width="372" height="248">
         <p class="card-item__text">{{ item.imgName }}</p>
       </li>
     </ul>
@@ -120,7 +120,6 @@ export default {
         justify-content: center;
         width: 47%;
         padding-bottom: 30px;
-        margin-right: 20px;
         margin-bottom: 20px;
         @media screen and (max-width: 320px) {
           margin-right: 15px;
