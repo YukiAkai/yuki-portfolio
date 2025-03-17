@@ -32,7 +32,7 @@
     <transition name="fade">
       <img-modal v-if="showModal" :imgDirectory="imgDirectory" :imgSrc="imgSrc" :imgName="imgName" @clickCloseModal="closeModal()"/>
     </transition>
-    <router-link to="/" class="page-umania__top-link text-link"><i class="icon icon-arrow-left"></i>PAGE TOP</router-link>
+    <router-link to="/" class="page-umania__top-link text-link"><span class="icon icon-arrow-left"></span>PAGE TOP</router-link>
   </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
   <div :class="{ 'page-profile--sp': isSmartPhone }" class="page-profile">
-    <h1 class="page-profile__heading"><i class="icon icon-profile"></i>Profile</h1>
+    <h1 class="page-profile__heading"><span class="icon icon-profile"></span>Profile</h1>
     <div class="profile-block">
-      <img class="profile-block__img" src="@/assets/img/profile_yuki.png" alt="Yuki Akai">
+      <img class="profile-block__img" src="@/assets/img/profile_yuki.png" alt="Yuki Takata（Akai）">
       <div class="profile-block__text profile-block-text">
-        <p class="profile-block-text__name">Yuki Akai</p>
+        <p class="profile-block-text__name">Yuki Takata（Akai）</p>
         <p class="profile-block-text__detail">
           マークアップエンジニアの端くれ。
           <br>
@@ -26,10 +26,10 @@
       </a>
     </div>
     <div class="skill-block">
-      <h2 class="skill-block__heading"><i class="icon icon-pc"></i>Skill</h2>
+      <h2 class="skill-block__heading"><span class="icon icon-pc"></span>Skill</h2>
       <div class="skill-block__inner">
         <div class="contents-skill">
-          <h3 class="contents-skill__heading"><i class="icon icon-code"></i>Design / Coding</h3>
+          <h3 class="contents-skill__heading"><span class="icon icon-code"></span>Design / Coding</h3>
           <p class="contents-skill__detail">基本的なことは一通りできます。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">HTML5</li>
@@ -38,7 +38,7 @@
           </ul>
         </div>
         <div class="contents-skill">
-          <h3 class="contents-skill__heading"><i class="icon icon-js"></i>Frontend</h3>
+          <h3 class="contents-skill__heading"><span class="icon icon-js"></span>Frontend</h3>
           <p class="contents-skill__detail">最近はVue.jsを使用して開発することが多いです。このサイトもVue.jsで作っています。</p>
           <ul class="contents-skill__list contents-skill-list">
             <li class="contents-skill-list__item">JavaScript</li>

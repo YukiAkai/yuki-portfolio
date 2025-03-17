@@ -3,7 +3,7 @@
     <h1 class="page-comic__heading">漫符絵本</h1>
     <div class="page-comic__catch page-comic-catch">
       キャラクターに漫符を入力するとストーリーが動的に変化するインタラクティブなデジタル絵本システム
-      <br><a class="page-comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます<i class="icon icon-arrow-right"></i></a>
+      <br><a class="page-comic-catch__link text-link" href="http://yukiakai.github.io/Comic-Symbols/" target="_blank">ここから遊べます<span class="icon icon-arrow-right"></span></a>
     </div>
     <img class="page-comic__img" src="@/assets/img/comic-symbols.png" alt="漫符絵本" width="372" height="248">
     <h2 class="page-comic__sub-heading">概要</h2>
@@ -18,11 +18,11 @@
       <h2 class="page-comic-description__heading">漫符とは…</h2>
       <div class="page-comic-description__detail description-detail">
         漫符とは、感情や様態を表現するコミック特有の記号表現であり、感情や状態を視覚的に表現する目的で主に利用されている (e.g. 汗マーク, 怒りマーク ect...) 。これらはキャラクターの表情に付与することでその感情をより明確に示したり、強調したりすることができる。さらに、後ろ姿や吹き出しの中に漫符を描くだけでも対象の心情が理解できるため、表情が描かれていなくても対象のコマ内のキャラクターの立ち位置やシーンの状況などが把握できるようになる。
-        <br><router-link to="/link/" class="description-detail__link text-link">執筆した漫符に関する研究論文<i class="icon icon-arrow-right"></i></router-link>
+        <br><a href="https://dl.mtstlab.org/papers/195/" class="description-detail__link text-link">執筆した漫符に関する研究論文<span class="icon icon-arrow-right"></span></a>
       </div>
       <img class="page-comic-description__img" src="@/assets/img/bebber.png" alt="bebberくん">
     </div>
-    <router-link to="/" class="page-comic__top-link text-link"><i class="icon icon-arrow-left"></i>PAGE TOP</router-link>
+    <router-link to="/" class="page-comic__top-link text-link"><span class="icon icon-arrow-left"></span>PAGE TOP</router-link>
   </div>
 </template>
 

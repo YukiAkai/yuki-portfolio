@@ -5,7 +5,7 @@
         <img :src="require('@/assets/img/' + imgDirectory + imgSrc + '.png')" :alt="imgName" class="modal-box__img">
       </div>
       <div class="modal-box__close" @click="clickCloseModal">
-        <i class="icon icon-close"></i>
+        <span class="icon icon-close"></span>
       </div>
     </div>
   </div>
