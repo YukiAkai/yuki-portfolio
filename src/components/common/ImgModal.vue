@@ -55,7 +55,7 @@ export default {
     z-index: 100;
     display: flex;
     flex-direction: column;
-    width: 410px;
+    width: 350px;
     height: auto;
     &__inner {
       padding: 10px;
