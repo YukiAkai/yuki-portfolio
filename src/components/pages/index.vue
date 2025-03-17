@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'page-top--sp': isSmartPhone }" class="page-top">
     <h1 class="page-top__heading">このサイトについて</h1>
-    <p class="page-top__note">主に趣味で描いたイラストや学生時代に制作したコンテンツを公開しています。</p>
+    <p class="page-top__note">趣味で描いたイラストや学生時代に制作したコンテンツを公開しています。</p>
     <ul class="page-top__list page-top-list">
       <li v-for="(item, index) in items" :key="index" class="page-top-list__item">
         <component
