@@ -1,5 +1,7 @@
 <template>
   <div :class="{ 'page-top--sp': isSmartPhone }" class="page-top">
+    <h1 class="page-top__heading">このサイトについて</h1>
+    <p class="page-top__note">主に趣味で描いたイラストや学生時代に制作したコンテンツを公開しています。</p>
     <ul class="page-top__list page-top-list">
       <li v-for="(item, index) in items" :key="index" class="page-top-list__item">
         <component
@@ -48,16 +50,6 @@ export default {
           title: 'Umania',
           path: '/umania/',
           img: require('@/assets/img/top_umania.png')
-        },
-        {
-          title: 'Catooon House',
-          path: '/catooon-house/',
-          img: require('@/assets/img/top_catooon.png')
-        },
-        {
-          title: 'Processing',
-          path: '/processing/',
-          img: require('@/assets/img/top_processing.png')
         }
       ]
     }
@@ -77,6 +69,14 @@ export default {
   min-height: 350px;
   padding: 30px 20px 10px;
   margin: 0 auto;
+  &__heading {
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  &__note {
+    margin-bottom: 20px;
+  }
   .page-top-list {
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +117,9 @@ export default {
   &--sp {
     width: auto;
     padding: 30px 4% 10px;
+    #{$this}__heading {
+      font-size: 30px;
+    }
     .page-top-list {
       &:before,
       &:after {

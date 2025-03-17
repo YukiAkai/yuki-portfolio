@@ -21,9 +21,7 @@ export default {
     return {
       items: [
         { title: 'Top', path: '/', reg: '^/$' },
-        { title: 'Profile', path: '/profile/', reg: '^/profile/$' },
-        { title: 'Activity', path: '/activity/', reg: '^/activity/$' },
-        { title: 'Link', path: '/link/', reg: '^/link/$' }
+        { title: 'Profile', path: '/profile/', reg: '^/profile/$' }
       ],
       scrollY: 0
     }
@@ -63,7 +61,7 @@ export default {
     display: flex;
     list-style: none;
     .header-menu-item {
-      width: 25%;
+      width: 50%;
       text-align: center;
       background: #5389d6;
       @media (hover: hover) {
