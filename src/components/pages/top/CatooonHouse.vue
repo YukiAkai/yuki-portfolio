@@ -14,7 +14,7 @@ export default {
 .page-catooon {
   width: 990px;
   min-height: 350px;
-  padding: 20px;
+  padding: 30px;
   margin: 0 auto;
 }
 </style>

@@ -67,15 +67,15 @@ export default {
   $this: &;
   max-width: 990px;
   min-height: 350px;
-  padding: 30px 20px 10px;
+  padding: 30px;
   margin: 0 auto;
   &__heading {
-    margin-bottom: 15px;
-    font-size: 35px;
+    margin-bottom: 20px;
+    font-size: 30px;
     font-weight: bold;
   }
   &__note {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .page-top-list {
     display: flex;
@@ -116,9 +116,9 @@ export default {
   }
   &--sp {
     width: auto;
-    padding: 30px 4% 10px;
+    padding: 20px;
     #{$this}__heading {
-      font-size: 30px;
+      font-size: 24px;
     }
     .page-top-list {
       &:before,

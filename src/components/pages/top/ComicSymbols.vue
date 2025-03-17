@@ -39,7 +39,7 @@ export default {
   $this: &;
   width: 990px;
   min-height: 350px;
-  padding: 30px 20px;
+  padding: 30px;
   margin: 0 auto;
   .icon {
     background-size: 100%;
