@@ -158,6 +158,13 @@ export default {
         cursor: pointer;
         background: #eee;
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        @media (hover: hover) {
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
         &__img {
           max-width: 100%;
           height: auto;
